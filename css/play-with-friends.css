@@ -1,0 +1,121 @@
+section {
+  padding: 1rem;
+}
+
+.never-lonely-section {
+  background: url("../assets/bg9.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.create-space-section {
+  background: url("../assets/bg10.jpg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.estimation-cost-form output[name="playerout"] {
+  margin-right: 0.5rem;
+}
+
+.estimation-cost-form output[name="const"] {
+  margin-left: 0.2rem;
+}
+
+.estimation-cost-form input[type="range"] {
+  margin-left: 0.2rem;
+}
+
+.chest {
+  /* The scaled picture will stay pixelated. */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  margin: 250px;
+  pointer-events: all;
+  transform: scale(var(--scale));
+}
+
+.chest-container {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.rent-now {
+  position: absolute;
+  width: max-content;
+  left: 50%;
+  top: 50%;
+
+  /* Scale value will up to 8, but only scale x4 for the text */
+  /* so it will not be too big in mobile view */
+  transform: translateX(-50%) translateY(-50%) scale(min(var(--scale), 4));
+  z-index: 1;
+  opacity: 70%;
+}
+
+.join-section {
+  min-height: auto;
+  height: auto;
+  padding-bottom: 5rem;
+
+  background: url("../assets/bg11.png") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.join-section form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.join-section input {
+  box-sizing: border-box;
+  font-family: "MinecraftTen";
+  border: none;
+  background: transparent;
+  padding: 1rem;
+  color: #fff;
+  background: black;
+  border: gray 1px solid;
+}
+
+.join-section input:disabled {
+  background: darkgray;
+}
+
+.join-section input:focus {
+  border: gray 1px solid;
+  outline: none;
+}
+
+.firework-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.firework-container img {
+  position: absolute;
+  opacity: 0;
+}
+
+.firework-container img.display {
+  opacity: 1;
+}
+
+@media screen and (max-width: 580px) {
+  .join-section form {
+    flex-direction: column;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 0 2rem;
+  }
+
+  .join-section form input {
+    width: 100%;
+  }
+}

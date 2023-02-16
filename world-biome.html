@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft Fan Club - World & Biome</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/world-biome.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+
+    <link rel="prefetch" href="assets/biome-desert.jpg" as="image" />
+    <link rel="prefetch" href="assets/biome-jungle.jpg" as="image" />
+    <link rel="prefetch" href="assets/biome-mushroom-island.jpg" as="image" />
+    <link rel="prefetch" href="assets/biome-plain.jpg" as="image" />
+    <link rel="prefetch" href="assets/biome-snowy-tundra.jpg" as="image" />
+  </head>
+
+  <header>
+    <input type="checkbox" id="menu-open" />
+    <label for="menu-open">
+      <img
+        src="assets/menu.svg"
+        alt="menu"
+        class="util-image-black-shadow-filter pointer menu-button"
+        width="18"
+        height="18"
+      />
+    </label>
+    <div class="title">Minecraft Fans Club</div>
+
+    <div class="menu">
+
+    <label for="menu-open">
+      <img
+        src="assets/close.svg"
+        width="32"
+        height="32"
+        class="menu-close pointer util-image-black-shadow-filter"
+      />
+      </img>
+
+      <div class="menu-top"></div>
+
+      <ul>
+        <li>
+          <a href="index.html"> Home </a>
+        </li>
+        <li>
+          <a href="world-biome.html">World & Biome</a>
+        </li>
+        <li>
+          <a href="play-with-friends.html">Play with Friends</a>
+        </li>
+      </ul>
+
+      <img src="assets/jeb.gif" alt="jeb" class="jeb" />
+    </div>
+  </header>
+
+  <body>
+    <section class="world-biome-intro-section">
+      <h1 class="util-slide-in">Explore & Discover</h1>
+      <h3 class="util-slide-in delay-1">
+        Minecraft has unlimited world size with different world and biome.
+        <br />
+        Find your favorite biome and build your kingdom!
+      </h3>
+    </section>
+    <section class="overworld-section" id="overworld-section">
+      <h1>Overworld</h1>
+      <h3>
+        Overworld is the main world of Minecraft. It contain the most diverse
+        biome in the game.
+      </h3>
+      <div class="biome-selection">
+        <image
+          src="assets/chevron-left.svg"
+          onclick="previousBackground()"
+          width="32"
+          height="32"
+          class="util-image-black-shadow-filter pointer"
+        ></image>
+        <h2 id="biome-text">Wide Plains</h2>
+        <image
+          src="assets/chevron-right.svg"
+          onclick="nextBackground()"
+          width="32"
+          height="32"
+          class="util-image-black-shadow-filter pointer"
+        ></image>
+      </div>
+    </section>
+    <section class="nether-section bg-overworld" id="nether-section">
+      <h1>Nether</h1>
+      <h3>
+        You need to build a Nether Portal to reach Nether. Dangerous everywhere.
+        <br />
+        <br />
+        Prepare before you go.
+      </h3>
+
+      <div class="nether-portal-box">
+        <img
+          src="assets/nether-portal.gif"
+          alt="nether portal"
+          class="util-image-white-shadow-filter pointer"
+          width="384"
+          onclick="goNether()"
+        />
+        <h3 id="nether-click-text">Click to enter</h3>
+      </div>
+
+      <img
+        src="assets/nether-transition.gif"
+        alt="nether transition"
+        class="nether-transition"
+        id="nether-transition"
+      />
+    </section>
+
+    <section class="end-section">
+      <h1>The End</h1>
+      <h3>
+        The End is the last world of Minecraft.
+        <br />
+        <br />
+        This is the last world you can reach. You will see the void and the
+        final boss.
+        <br />
+        <br />
+        Ender Dragon.....
+      </h3>
+      <img
+        src="assets/ender-dragon.gif"
+        alt="ender dragon"
+        class="ender-dragon util-image-white-shadow-filter"
+      />
+    </section>
+    <section class="play-tgt-section">
+      <h2>Lonely?</h2>
+      <a class="minecraft-button" href="play-with-friends.html"
+        >Play with friends!</a
+      >
+    </section>
+  </body>
+  <script src="js/world-biome.js"></script>
+</html>

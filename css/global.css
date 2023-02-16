@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "MinecraftTen";
+  src: url("../fonts/MinecraftTen-VGORe.ttf") format("truetype");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "MinecraftTen";
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3em;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2em;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1em;
+  width: 100%;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+  text-align: center;
+}
+
+/* This will add shadow to the png image like how text-shadow work */
+.util-image-black-shadow-filter {
+  filter: drop-shadow(0 0 10px #000);
+}
+
+.util-image-white-shadow-filter {
+  filter: drop-shadow(0 0 10px #fff);
+}
+
+/* When this class apply with util-slide-in class, the animation will start right after the one that doesn't apply */
+.delay-1 {
+  --animation-delay: 0.5s;
+}
+
+.util-slide-in {
+  animation: slide-in 1s ease-in-out;
+  animation-delay: var(--animation-delay);
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* The text will slide from up to down and fade in */
+@keyframes slide-in {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.util-bounce {
+  animation: bounce 5s infinite;
+}
+
+/* Bounce Animation, the "Scroll Down to see more" section will bounce up and down */
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  4% {
+    transform: translateY(-10px);
+  }
+  8% {
+    transform: translateY(0px);
+  }
+  12% {
+    transform: translateY(-10px);
+  }
+  16% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Place the video element to the background and place it to center */
+
+.util-video-bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+
+  /* Fall back to image if video do not supported in the browser */
+  background: url("../assets/bg2.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.util-video-bg > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.minecraft-button {
+  background: #3b8526;
+
+  /* Not the actual shadow. It is the border of the minecraft-like button */
+  box-shadow: inset 0 4px #6bc349, inset 0 -4px #2a631c, 0 4px rgb(0 0 0 / 25%);
+  color: #fff;
+  text-shadow: 0 1px 0 #2a631c;
+  display: flex;
+  text-align: center;
+  width: max-content;
+  padding: 1rem;
+  font-size: 1rem;
+
+  /* Remove underline from the link */
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}

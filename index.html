@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft Fan Club - Home</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+
+    <link rel="prefetch" href="assets/bg2.mp4" as="video" />
+  </head>
+
+  <header>
+    <input type="checkbox" id="menu-open" />
+    <label for="menu-open">
+      <img
+        src="assets/menu.svg"
+        alt="menu"
+        class="util-image-black-shadow-filter pointer menu-button"
+        width="18"
+        height="18"
+      />
+    </label>
+    <div class="title">Minecraft Fans Club</div>
+
+    <div class="menu">
+
+    <label for="menu-open">
+      <img
+        src="assets/close.svg"
+        width="32"
+        height="32"
+        class="menu-close pointer util-image-black-shadow-filter"
+      />
+      </img>
+
+      <div class="menu-top"></div>
+
+      <ul>
+        <li>
+          <a href="index.html"> Home </a>
+        </li>
+        <li>
+          <a href="world-biome.html">World & Biome</a>
+        </li>
+        <li>
+          <a href="play-with-friends.html">Play with Friends</a>
+        </li>
+      </ul>
+
+      <img src="assets/jeb.gif" alt="jeb" class="jeb" />
+    </div>
+  </header>
+
+  <body>
+    <section class="home-section-1">
+      <h1 class="util-slide-in">Minecraft Fans Club</h1>
+      <h2 class="util-slide-in delay-1">Join us and have fun</h2>
+      <div class="scroll-down-box util-bounce" id="scroll-box">
+        <span>Scroll Down to see more</span>
+        <img
+          width="48"
+          height="48"
+          src="assets/down-arrow.svg"
+          alt="down-arrow"
+          class="util-image-black-shadow-filter"
+        />
+      </div>
+    </section>
+    <section class="home-section-2" id="home-section-2">
+      <div class="util-video-bg">
+        <video muted playsinline id="home-section-2-bg">
+          <source src="assets/bg2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <h1>Survival at night</h1>
+      <h3>Hostile mob will spawn at night or in the caves.</h3>
+      <h3>These are some common mob you will see in Minecraft.</h3>
+      <div class="mob-flex">
+        <div>
+          <img src="assets/creeper.png" alt="creeper" height="180" />
+          <span>Creeper</span>
+        </div>
+        <div>
+          <img src="assets/zombie.png" alt="zombie" height="180" />
+          <span>Zombie</span>
+        </div>
+        <div>
+          <img src="assets/skeleton.png" alt="skeleton" height="180" />
+          <span>Skeleton</span>
+        </div>
+      </div>
+    </section>
+    <section class="home-section-3">
+      <h1>Build your own Kingdom</h1>
+      <h2>Or build whatever you want</h2>
+      <h3>
+        Biling a Kingdom is too complex? <br />
+        There are some simple house you can try to build!
+      </h3>
+      <div class="util-image-white-shadow-filter house-container">
+        <div>
+          <img width="256" src="assets/house4.png" alt="House 4" />
+          <h3>Taiga House</h3>
+        </div>
+
+        <div>
+          <img width="256" src="assets/house1.png" alt="House 1" />
+          <h3>Plain House</h3>
+        </div>
+
+        <div>
+          <img width="256" src="assets/house2.png" alt="House 2" />
+          <h3>Savanna House</h3>
+        </div>
+
+        <div>
+          <img width="256" src="assets/house3.png" alt="House 3" />
+          <h3>Snowy House</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section-4">
+      <h2>
+        Interested? <br />
+        Learn more about Minecraft!
+      </h2>
+      <a class="minecraft-button" href="world-biome.html">World & Biome</a>
+    </section>
+  </body>
+
+  <script src="js/index.js"></script>
+</html>

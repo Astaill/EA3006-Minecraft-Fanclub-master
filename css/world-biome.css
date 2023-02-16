@@ -1,0 +1,106 @@
+section {
+  padding: 1rem;
+}
+
+.world-biome-intro-section {
+  background: url("../assets/bg5.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 1rem;
+}
+
+.overworld-section {
+  background: url("../assets/biome-plain.jpg") no-repeat center center;
+  background-size: cover;
+  transition: background-image 0.5s;
+}
+
+.biome-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.biome-selection h2 {
+  margin: 0;
+  transform: translateY(2px);
+  width: 10rem;
+}
+
+.nether-section {
+  position: relative;
+}
+
+.bg-overworld {
+  background: url("../assets/bg6-1.jpg") center center / cover no-repeat;
+}
+
+.bg-nether {
+  background: url("../assets/bg6-2.jpg") center center / cover no-repeat;
+}
+
+.nether-transition {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  pointer-events: none;
+
+  transition: all 2s ease-in-out;
+  opacity: 0;
+}
+
+.nether-portal-box {
+  margin-top: 3rem;
+}
+.nether-portal-box img {
+  max-width: 40%;
+}
+
+.end-section {
+  position: relative;
+  overflow: hidden;
+  background: url("../assets/bg7.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.ender-dragon {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  animation: dragon-fly 8s infinite ease-in-out;
+}
+
+/* The dragon fly animation. It fly faster at start, then slower. */
+@keyframes dragon-fly {
+  0% {
+    transform: translateY(-25vh) translateX(25vw);
+    opacity: 0;
+  }
+  1% {
+    transform: translateY(-25vh) translateX(25vw);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(25vh) translateX(-25vw);
+  }
+  99% {
+    transform: translateY(100vh) translateX(-100vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(125vh) translateX(-125vw);
+    opacity: 0;
+  }
+}
+
+.play-tgt-section {
+  background: url("../assets/bg8.png") repeat-x center center;
+  background-size: cover;
+  height: auto;
+  min-height: auto;
+  padding-bottom: 2rem;
+}
